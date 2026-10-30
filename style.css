@@ -15,7 +15,7 @@ body {
 	font-size: 16px;
 	/* line-height: 1.5; */
 	background-image: url("./images/league.png");
-	background-size: cover;
+	background-size: auto;
 	background-repeat: no-repeat;
 	height: 100%;
 }
@@ -222,4 +222,169 @@ body {
 
 .arrow-up:hover .arrow-icon {
 	stroke: #34343e;
+}
+
+
+/* modal styles */
+
+.bookmark-overlay,
+.saved-overlay,
+.edit-bookmark-overlay {
+	display: none;
+	position: fixed;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(52, 52, 62, 0.7);
+}
+
+.show-bookmark,
+.show-edit-bookmark,
+.show-saved {
+	display: block;
+}
+
+.bookmark-overlay__form,
+.edit-bookmark-overlay__form,
+.saved-overlay__movie {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.add-bookmark,
+.edit-bookmark {
+	width: 540px;
+	padding: 70px 60px 60px;
+	background-color: white;
+	border-radius: 10px;
+	height: 60%;
+	overflow-y: auto;
+}
+
+.add-bookmark__title,
+.edit-bookmark__title {
+	font-size: 36px;
+	line-height: 1.1;
+	color: #1d1d1f;
+	margin-bottom: 45px;
+	margin-top: 0;
+	text-align: center;
+}
+
+.add-bookmark__input-wrap,
+.edit-bookmark__input-wrap {
+	display: flex;
+	flex-flow: column;
+	margin-bottom: 30px;
+}
+
+.add-bookmark__label,
+.edit-bookmark__label {
+	font-size: 18px;
+	color: var(--main-color);
+}
+
+.add-bookmark__input,
+.edit-bookmark__input {
+	border: 2px solid var(--main-color);
+	border-radius: 16px;
+	font-size: 18px;
+	padding: 16px 24px;
+	position: relative;
+	resize: vertical;
+}
+
+.add-bookmark__input--file::-webkit-file-upload-button,
+.edit-bookmark__input--file::-webkit-file-upload-button {
+	border: none;
+	text-indent: -9999px;
+	width: 40px;
+	opacity: 0;
+	cursor: pointer;
+}
+
+.add-bookmark__input--file:before,
+.edit-bookmark__input--file:before {
+	content: url(../images/clip.svg);
+	display: block;
+	width: 24px;
+	height: 24px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: opacity 0.2s ease-in-out;
+}
+
+/*.add-bookmark__input--file:hover::before .edit-bookmark__input--file:hover::before {
+	opacity: 0.7;
+}*/
+
+.add-bookmark__buttons,
+.edit-bookmark__buttons {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 30px;
+}
+
+.add-bookmark__btn,
+.edit-bookmark__btn {
+	border: 2px solid var(--main-color);
+	background-color: white;
+	border-radius: 16px;
+	width: 100%;
+	padding: 15px;
+}
+
+.add-bookmark__btn:hover,
+.edit-bookmark__btn:hover {
+	border-color: #fba808;
+	background-color: #fba808;
+	color: white;
+}
+
+.edit-bookmark__delete {
+	background-color: white;
+	border-radius: 16px;
+	color: var(--main-color);
+	height: 44px;
+	border: 2px solid var(--main-color);
+	width: calc((100% - 30px) / 2);
+}
+
+.edit-bookmark__delete:hover {
+	background-color: var(--main-color);
+	color: white;
+}
+
+.movie-modal__description {
+	max-height: 200px;
+	overflow-y: auto;
+}
+
+.easter-egg {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 200px;
+	z-index: 999;
+}
+
+.easter-egg img {
+	width: 100%;
+}
+
+.movie-list-header {
+	margin-bottom: 1rem;
+}
+
+.sort-select {
+	background-color: hsl(0deg 0% 99%);
+	padding: 0.5rem 1rem;
+	border-radius: 16px;
+	border: 2px solid var(--main-color);
 }

@@ -86,9 +86,37 @@
 				</svg>
 			</button>
 		</footer>
-
 	</div>
-	</svg>
+
+	<section class="bookmark-overlay">
+		<form name="create-movie-record" class="bookmark-overlay__form add-bookmark">
+		  <h2 class="add-bookmark__title">Создание записи</h2>
+		  <div class="add-bookmark__input-wrap">
+			<label class="add-bookmark__label" for="movie-title">Название</label>
+			<input class="add-bookmark__input" id="movie-title" name="name" type="text" placeholder="Type something here..." />
+		  </div>
+		  <div class="add-bookmark__input-wrap">
+			<label class="add-bookmark__label" for="movie-poster">Постер</label>
+			<input class="add-bookmark__input add-bookmark__input--file" id="movie-poster" name="poster" type="file" />
+		  </div>
+		  <div class="add-bookmark__input-wrap">
+			<label class="add-bookmark__label" for="movie-year">Год выпуска</label>
+			<input class="add-bookmark__input" id="movie-year" name="releaseYear" type="number" placeholder="Type something here..." />
+		  </div>
+		  <div class="add-bookmark__input-wrap">
+			<label class="add-bookmark__label" for="genres">Жанры</label>
+			<input class="add-bookmark__input" id="genres" name="genres" type="text" placeholder="Type something here..." />
+		  </div>
+		  <div class="add-bookmark__input-wrap">
+			<label class="add-bookmark__label" for="description">Описание</label>
+			<textarea class="add-bookmark__input" id="description" name="description" placeholder="Type something here..."></textarea>
+		  </div>
+		  <div class="add-bookmark__buttons">
+			<button id="cancel-bookmark" type="button" class="cancel-button add-bookmark__btn button">Отменить</button>
+			<button id="save-bookmark" type="submit" class="save-button add-bookmark__btn button">Сохранить</button>
+		  </div>
+		</form>
+	  </section>	  
 <script src="main.js"></script>
 </body>
 
