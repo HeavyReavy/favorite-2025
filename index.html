@@ -7,7 +7,7 @@
   <meta name="description" content="" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <link rel="shortcut icon" href="assets/images/logo.svg" />
+  <link rel="shortcut icon" href="./images/logo-bottom.svg" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,7 +26,7 @@
     <img class="header__logo" src="./images/logo-top.svg" alt="logo" />
     <div class="header__search">
       <input type="text" class="search search--short" placeholder="Type something here..." />
-      <button type="button" class="add-button button button--yellow">Добавить</button>
+      <button id="add" type="button" class="add-button button button--yellow">Добавить</button>
       <button type="button" class="what-watch-button button button--yellow">Что посмотреть?</button>
     </div>
   </header>
@@ -58,7 +58,7 @@
   </footer>
 </div>
 
-<section class="bookmark-overlay">
+<section id="movie-record-create-dialog" class="bookmark-overlay">
   <form name="create-movie-record" class="bookmark-overlay__form add-bookmark">
     <h2 class="add-bookmark__title">Создание записи</h2>
     <div class="add-bookmark__input-wrap">
@@ -159,6 +159,6 @@
     });
   </script>
 -->
-
+<script src="main.js"></script>
 </body>
 </html>
